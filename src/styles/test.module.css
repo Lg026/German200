@@ -1,0 +1,234 @@
+
+.Qnum {
+    padding-top: 3.5rem;
+}
+
+.german {
+    padding-top: 0.5rem;
+}
+
+.sentence {
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.right {
+    background-color: #2ECC40;
+    color: #FFF2F2;
+    width: 15rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    margin-bottom: 0.7rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wrong {
+    background-color: #FF4136;
+    color: #FFF2F2;
+    width: 15rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    margin-bottom: 0.7rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listContainer {
+    margin-top: 1rem;
+}
+
+.questions {
+    background-color: #4A4A4A;
+    color: #FFF2F2;
+    width: 15rem;
+    height: 2.5rem;
+    margin: 0 auto;
+    margin-bottom: 0.7rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checkBoxes {
+    display: block;
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.btn {
+    width: 10%;
+    background-color: #7286D3;
+    color: #FFF2F2;
+    border-radius: 0.4rem;
+    height: 2rem;
+    border: none;
+    padding-top: 0.2rem;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #5a6ebc;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.ending {
+    margin-top: 3rem;
+}
+
+.loading {
+    margin-top: 20%;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 2560px) {
+    .Qnum {
+        font-size: 3rem;
+    }
+
+    .german {
+        font-size: 2rem;
+    }
+
+    .sentence {
+        font-size: 2rem;
+    }
+
+    .questions {
+        height: 4rem;
+        width: 25rem;
+        font-size: 1.5rem;
+    }
+
+    .wrong {
+        height: 4rem;
+        width: 25rem;
+        font-size: 1.5rem;
+    }
+
+    .right {
+        height: 4rem;
+        width: 25rem;
+        font-size: 1.5rem;
+    }
+
+    .checkBoxes {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .btn {
+        height: 3.5rem;
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+    }
+
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+    .Qnum {
+        font-size: 2.5rem;
+    }
+
+    .german {
+        font-size: 2rem;
+    }
+
+    .sentence {
+        font-size: 2rem;
+    }
+
+    .questions {
+        height: 3rem;
+        width: 25rem;
+        font-size: 1.5rem;
+        }
+
+    .right {
+        height: 3rem;
+        width: 25rem;
+        font-size: 1.5rem;
+    }
+
+    .wrong {
+        height: 3rem;
+        width: 25rem;
+        font-size: 1.5rem;
+    }
+
+    .checkBoxes {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .btn {
+        height: 2.5rem;
+    }
+
+}
+
+@media (max-width: 1444px) {
+    .btn {
+        width: 15%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .btn {
+        width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        width: 20%;
+    }
+
+    .loading {
+        margin-top: 25%;
+    }
+
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+    .btn {
+        width: 25%;
+    }
+
+    .loading {
+        margin-top: 50%;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .btn {
+        width: 30%;
+    }
+}
+
+@media (max-width: 375px) {
+    .ending {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 325px) {
+    .btn {
+        width: 35%;
+    }
+}

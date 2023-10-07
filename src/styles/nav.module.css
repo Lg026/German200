@@ -1,0 +1,43 @@
+.nav {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3rem;
+    background-color: #7286D3;
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 2rem;
+    padding-top: 0.8rem;
+}
+
+.a {
+    padding: 0.5rem;
+    color: #FFF2F2;
+    text-decoration: none;
+}
+
+@media (min-width: 2560px) {
+    .nav {
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .ul {
+        padding-left: 3rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .ul {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .ul {
+        padding-left: 0.5rem;
+    }
+}
