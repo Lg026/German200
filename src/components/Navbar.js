@@ -7,8 +7,6 @@ export const Navbar = () => {
     <nav className={navStyles.nav}>
         <ul className={navStyles.ul}>
             <li><NavLink className={navStyles.a} to='/'>Home</NavLink></li>
-            {/* <li className={navStyles.a}>Test</li>
-            <li className={navStyles.a}>Contact</li> */}
         </ul>
     </nav>
   )

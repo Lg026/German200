@@ -7,8 +7,7 @@ const randomAnswers = (answerArray, correctAnswer, count) => {
   let randomized = [];
   
   while(randomized.length < count - 1) {
-    const randomIndex = Math.floor(Math.random() * filteredArray.length);
-    const randomAnswer = filteredArray[randomIndex];
+    const randomAnswer = filteredArray[Math.floor(Math.random() * filteredArray.length)];
     if(!randomized.includes(randomAnswer)) {
       randomized.push(randomAnswer);
     }
@@ -30,10 +29,9 @@ export const Test = () => {
     useEffect(() => {
     axios.get('https://languageapi-yne8.onrender.com/')
     .then(res => {
-      const words = res.data;
-      const correctAnswer = words[0].English;
-      const randomizedAnswers = randomAnswers(words.map(word => word.English), correctAnswer, 4);
-      setData({words: words, currentIndex: 0, loading: false});
+      const correctAnswer = res.data[0].English;
+      const randomizedAnswers = randomAnswers(res.data.map(word => word.English), correctAnswer, 4);
+      setData({words: res.data, currentIndex: 0, loading: false});
       setAnswers(randomizedAnswers);
     })
     .catch(error => {
@@ -94,12 +92,12 @@ export const Test = () => {
         <p className={testStyles.sentence}>{data.words[data.currentIndex].Example}</p>
         <ul className={testStyles.listContainer}>
           {answers.map((answer) => (
-            <div key={answer} onClick={() => handleAnswerClick(answer)} className={`${showAnswer ? (answer === data.words[data.currentIndex].English ? testStyles.right :(selectedAnswer === answer ? testStyles.wrong : testStyles.questions)) : testStyles.questions}`}>
-              <input onKeyDown={handleKeyPress} className={testStyles.checkBoxes} type="checkbox" id={`answer${answer}`} name="answer" value={answer} checked={selectedAnswer === answer} onChange={(e) => handleAnswerClick(e.target.value)}
+            <div key={answer} onKeyDown={handleKeyPress} tabIndex={0} onClick={() => handleAnswerClick(answer)} className={`${showAnswer ? (answer === data.words[data.currentIndex].English ? testStyles.right :(selectedAnswer === answer ? testStyles.wrong : testStyles.questions)) : testStyles.questions}`}>
+              <input className={testStyles.checkBoxes} type="checkbox" id={`answer${answer}`} name="answer" value={answer} checked={selectedAnswer === answer} onChange={(e) => handleAnswerClick(e.target.value)}
               />
               <label htmlFor={`answer${answer}`}>{answer}</label>
             </div>
-          ))}
+          ))} 
         </ul>
         <button id="nextBtn" className={testStyles.btn} onClick={handleNextClick}>Next</button>
       </div>
