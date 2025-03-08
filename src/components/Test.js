@@ -92,7 +92,7 @@ export const Test = () => {
         <p className={testStyles.sentence}>{data.words[data.currentIndex].Example}</p>
         <ul className={testStyles.listContainer}>
           {answers.map((answer) => (
-            <div key={answer} onKeyDown={handleKeyPress} tabIndex={0} onClick={() => handleAnswerClick(answer)} className={`${showAnswer ? (answer === data.words[data.currentIndex].English ? testStyles.right :(selectedAnswer === answer ? testStyles.wrong : testStyles.questions)) : testStyles.questions}`}>
+            <div key={answer} onKeyDown={handleKeyPress} tabIndex={0} onClick={(e) => { e.currentTarget.focus();handleAnswerClick(answer);}} className={`${showAnswer ? (answer === data.words[data.currentIndex].English ? testStyles.right :(selectedAnswer === answer ? testStyles.wrong : testStyles.questions)) : testStyles.questions}`}>
               <input className={testStyles.checkBoxes} type="checkbox" id={`answer${answer}`} name="answer" value={answer} checked={selectedAnswer === answer} onChange={(e) => handleAnswerClick(e.target.value)}
               />
               <label htmlFor={`answer${answer}`}>{answer}</label>
@@ -103,7 +103,7 @@ export const Test = () => {
       </div>
     )
 }
-
+  
 export default Test
 
 
