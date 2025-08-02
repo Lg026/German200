@@ -1,0 +1,136 @@
+.container {
+    max-width: 37.5rem;
+    margin: 4rem auto;
+    padding: 1.2rem;
+    text-align: center;
+    background: white;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.progress {
+    margin-top: 2rem;
+}
+
+.dark {
+    background: #1a1a1a;
+    color: white;
+}
+
+.card {
+    position: relative;
+    height: 10rem;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+}
+
+.dark .front,
+.dark .back {
+    background: #4A4A4A;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.flipped .front {
+    transform: rotateY(-180deg);
+}
+
+.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.controls button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.controls button:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+@media (min-width: 2560px) {
+    .card {
+        width: 100%;
+        height: 25rem;
+        font-size: 1.8rem;
+    }
+    .back {
+        font-size: 1.8rem;
+    }
+
+    .progress {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 2559px) {
+    .card {
+        width: 100%;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        margin-top: 0rem;
+        margin-right: 0.5rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .card {
+        
+        height: 12rem;
+        margin-left: 1rem;
+    }
+
+    .controls button {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    
+}
